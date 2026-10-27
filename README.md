@@ -52,6 +52,12 @@ flutter test
 flutter build apk
 ```
 
+Check that VPN Gate is reachable and the CSV still parses:
+
+```sh
+dart run tool/check_servers.dart
+```
+
 ## Project structure
 
 ```text
