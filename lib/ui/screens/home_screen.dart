@@ -9,6 +9,7 @@ import '../../state/vpn_provider.dart';
 import '../widgets/empty_state.dart';
 import '../widgets/server_tile.dart';
 import '../widgets/status_pill.dart';
+import 'about_screen.dart';
 import 'connection_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -292,6 +293,13 @@ class _Header extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+          IconButton(
+            tooltip: 'About, privacy and terms',
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(builder: (_) => const AboutScreen()),
+            ),
+            icon: const Icon(Icons.info_outline_rounded),
           ),
           IconButton(
             tooltip: 'Refresh servers',
